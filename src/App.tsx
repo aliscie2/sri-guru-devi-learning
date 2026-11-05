@@ -34,7 +34,7 @@ export default function App() {
     if (course && lesson) setProgress(p => visitLesson(p, course.id, lesson.id));
   }, [course?.id, lesson?.id]);
   useEffect(() => {
-    const title = lesson?.title || course?.title || ({ learn: 'Explore learning', about: 'About the foundation', 'my-learning': 'My learning', contact: 'Contact', privacy: 'Privacy', account: 'Your learning space' } as Record<string, string>)[page] || 'Learn. Reflect. Grow.';
+    const title = lesson?.title || course?.title || ({ learn: 'Explore learning', about: 'About the foundation', 'my-learning': 'My learning', contact: 'Contact', privacy: 'Privacy', account: 'Your learning space' } as Record<string, string>)[page] || 'A quieter way of being';
     document.title = `${title} · Sri Gurudevi Foundation`;
   }, [route]);
   const active = page === 'learn' ? 'learn' : page;
@@ -51,7 +51,7 @@ export default function App() {
   else content = <section className="container narrow page-section"><p className="eyebrow">LET’S FIND YOUR WAY</p><h1>This page isn’t here.</h1><p>Return to the library to choose a place to begin.</p><ButtonLink href="#/learn">Explore learning</ButtonLink></section>;
   return <>
     <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); mainRef.current?.focus(); }}>Skip to content</a>
-    <header className="site-header"><div className="container header-inner"><Brand /><nav aria-label="Main navigation" className="desktop-nav"><a className={active === 'learn' ? 'active' : ''} href="#/learn" aria-current={active === 'learn' ? 'page' : undefined}>Learn</a><a className={active === 'about' ? 'active' : ''} href="#/about" aria-current={active === 'about' ? 'page' : undefined}>About</a><a className={`nav-learning ${active === 'my-learning' ? 'active' : ''}`} href="#/my-learning" aria-current={active === 'my-learning' ? 'page' : undefined}><BookOpen size={17} />My learning</a></nav><button className="menu-toggle icon-button" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} aria-controls="mobile-nav" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button></div>{menu && <nav id="mobile-nav" aria-label="Mobile navigation"><a href="#/learn">Learn</a><a href="#/about">About</a><a href="#/my-learning">My learning</a></nav>}</header>
+    <header className="site-header"><div className="container header-inner"><Brand /><nav aria-label="Main navigation" className="desktop-nav"><a className={active === 'learn' ? 'active' : ''} href="#/learn" aria-current={active === 'learn' ? 'page' : undefined}>Learn</a><a className={active === 'about' ? 'active' : ''} href="#/about" aria-current={active === 'about' ? 'page' : undefined}>About</a><a className={`nav-learning ${active === 'my-learning' ? 'active' : ''}`} href="#/my-learning" aria-current={active === 'my-learning' ? 'page' : undefined}>My learning</a></nav><button className="menu-toggle icon-button" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} aria-controls="mobile-nav" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button></div>{menu && <nav id="mobile-nav" aria-label="Mobile navigation"><a href="#/learn">Learn</a><a href="#/about">About</a><a href="#/my-learning">My learning</a></nav>}</header>
     {storageError && <div role="status" className="storage-notice">Your browser can’t save progress right now. You can still read every lesson.</div>}
     <main id="main" tabIndex={-1} ref={mainRef}>{content}</main>
     <footer><div className="container footer-main"><Brand /><p>A little space to learn, reflect, and grow.</p><nav aria-label="Footer navigation"><a href="#/contact">Contact</a><a href="#/privacy">Privacy</a><a href={official} target="_blank" rel="noopener noreferrer">Foundation website <ArrowUpRight size={14} /></a></nav></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Sri Gurudevi Foundation</span><span>Learning platform preview</span></div></footer>
@@ -59,13 +59,34 @@ export default function App() {
 }
 function Home() {
   return <>
-    <section className="container hero"><div className="hero-copy"><p className="eyebrow"><span className="eyebrow-line" /> A SPACE FOR INNER GROWTH</p><h1>Learn. Reflect.<br /><em>Grow within.</em></h1><p className="hero-description">Explore forgiveness, breath awareness, and a quieter way of being. One small step at a time.</p><ButtonLink href="#/learn">Find your starting point</ButtonLink><p className="hero-note"><Leaf size={16} /> At your pace. Wherever you are.</p></div><div className="hero-visual"><img className="hero-image" src={img('quiet-valley.jpg')} alt="Golden morning light falling across a quiet veranda and green valley" width="1536" height="1024" fetchPriority="high" /><span className="image-caption">A moment of stillness.</span></div></section>
-    <section className="library-section"><div className="container"><div className="section-heading"><div><p className="eyebrow">BEGIN SIMPLY</p><h2>A place to start.</h2></div><p>Follow what speaks to you.</p></div><div className="course-grid">{courses.map(c => <CourseCard key={c.id} course={c} />)}</div><p className="preview-note">The reading guides are introductory previews. The official course opens on the foundation’s course platform.</p></div></section>
-    <section className="container about-strip"><div className="about-photo"><img src={img('swami.jpg')} alt="Sri Swami Sai Krsna walking with a devotee" loading="lazy" width="1000" height="1112" /></div><div><p className="eyebrow">ROOTED IN A LIVING TRADITION</p><h2>A simple path.<br />An open heart.</h2><p>The Sri Gurudevi Foundation shares the teachings of Sri Swami Sai Krsna: nondual forgiveness, breath awareness, and the practice of letting go.</p><a className="text-link" href="#/about">Meet the foundation <ArrowRight size={18} /></a></div></section>
+    <section className="container hero">
+      <div className="hero-copy">
+        <p className="eyebrow">THE SRI GURUDEVI FOUNDATION</p>
+        <h1>A quieter<br />way of <em>being.</em></h1>
+        <p className="hero-description">Explore forgiveness and breath awareness.<br className="desktop-break" /> A little space for yourself.</p>
+        <ButtonLink href="#/learn">Begin learning</ButtonLink>
+      </div>
+      <figure className="hero-visual">
+        <img className="hero-image" src={img('swami-bali.jpg')} alt="Sri Swami Sai Krsna at a carved stone doorway surrounded by greenery in Ubud, Bali" width="1000" height="1333" fetchPriority="high" />
+        <figcaption>Sri Swami Sai Krsna <span>Ubud, Bali</span></figcaption>
+      </figure>
+    </section>
+    <section className="library-section"><div className="container">
+      <div className="section-heading"><h2>A place to begin.</h2><span>Learn at your own pace.</span></div>
+      <div className="course-grid">{courses.map(c => <CourseCard key={c.id} course={c} />)}</div>
+      <p className="preview-note">Reading guides are introductory previews. The official course opens on Teachable.</p>
+    </div></section>
+    <section className="container about-strip">
+      <div><p className="eyebrow">A LIVING TRADITION</p><h2>A simple path.<br /><em>An open heart.</em></h2></div>
+      <div><p>The teachings of Sri Swami Sai Krsna invite us to explore nondual forgiveness, awareness of the breath, and the practice of letting go.</p><a className="text-link" href="#/about">Meet the foundation <ArrowRight size={18} /></a></div>
+    </section>
   </>;
 }
 function CourseCard({ course }: { course: Course }) {
-  return <a href={coursePath(course)} className={`course-card card-${course.id}`}><div className="course-image"><img src={img(course.image)} alt={course.imageAlt} loading="lazy" width="600" height="400" /><span className="image-label">{course.label}</span></div><div className="course-card-body"><p className="category">{course.category}</p><h3>{course.title}</h3><p>{course.description}</p><div className="card-bottom"><span><BookOpen size={15} /> {course.duration}</span><span className="circle-arrow" aria-hidden="true"><ArrowRight size={19} /></span></div></div></a>;
+  return <a href={coursePath(course)} className={`course-card card-${course.id}`}>
+    <div className="course-image"><img src={img(course.image)} alt={course.imageAlt} loading="lazy" width="600" height="450" /></div>
+    <div className="course-card-body"><p className="course-kind">{course.label}</p><div className="course-title"><h3>{course.title}</h3><ArrowRight size={20} aria-hidden="true" /></div><p className="course-duration">{course.duration}</p></div>
+  </a>;
 }
 function Catalogue() {
   const [query, setQuery] = useState('');
