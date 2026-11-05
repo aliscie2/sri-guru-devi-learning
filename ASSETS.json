@@ -19,5 +19,15 @@
   "swami-bali.jpg": {
     "source": "https://images.squarespace-cdn.com/content/v1/6931343bc679aa4c5f9ab5f4/1778475563928-80LRM82IZOYVG28NPL6V/image-asset.jpeg?format=1000w",
     "use": "Original foundation photograph of Sri Swami Sai Krsna in Ubud, Bali; hero image. No alteration beyond responsive CSS crop."
+  },
+  "stillness-dawn.jpg": {
+    "source": "OpenAI built-in image generation",
+    "reference": "Selected Stillness design (displayed option 1)",
+    "use": "Full-width hero background. Fictional atmospheric landscape, not an identifiable foundation location. UI, logo and text are rendered separately.",
+    "dimensions": [
+      1717,
+      916
+    ],
+    "prompt": "Reconstruct the clean top photographic area of the selected mockup with all UI removed. Layered forested tropical hills, dawn mist through central valley, muted olive and charcoal, small golden sun at 75% width and 33% height, dark canopy upper left, dark foliage foreground. No buildings, people, text, logos, symbols, interface, watermarks, borders or cream panel. Match calm cinematic realism, natural shadows and restrained gold highlights."
   }
 }

@@ -49,33 +49,34 @@ export default function App() {
   else if (page === 'privacy') content = <Privacy />;
   else if (page === 'account') content = <Account />;
   else content = <section className="container narrow page-section"><p className="eyebrow">LET’S FIND YOUR WAY</p><h1>This page isn’t here.</h1><p>Return to the library to choose a place to begin.</p><ButtonLink href="#/learn">Explore learning</ButtonLink></section>;
-  return <>
+  return <div className={`site-shell${!page ? ' is-home' : ''}`}>
     <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); mainRef.current?.focus(); }}>Skip to content</a>
     <header className="site-header"><div className="container header-inner"><Brand /><nav aria-label="Main navigation" className="desktop-nav"><a className={active === 'learn' ? 'active' : ''} href="#/learn" aria-current={active === 'learn' ? 'page' : undefined}>Learn</a><a className={active === 'about' ? 'active' : ''} href="#/about" aria-current={active === 'about' ? 'page' : undefined}>About</a><a className={`nav-learning ${active === 'my-learning' ? 'active' : ''}`} href="#/my-learning" aria-current={active === 'my-learning' ? 'page' : undefined}>My learning</a></nav><button className="menu-toggle icon-button" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} aria-controls="mobile-nav" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button></div>{menu && <nav id="mobile-nav" aria-label="Mobile navigation"><a href="#/learn">Learn</a><a href="#/about">About</a><a href="#/my-learning">My learning</a></nav>}</header>
     {storageError && <div role="status" className="storage-notice">Your browser can’t save progress right now. You can still read every lesson.</div>}
     <main id="main" tabIndex={-1} ref={mainRef}>{content}</main>
     <footer><div className="container footer-main"><Brand /><p>A little space to learn, reflect, and grow.</p><nav aria-label="Footer navigation"><a href="#/contact">Contact</a><a href="#/privacy">Privacy</a><a href={official} target="_blank" rel="noopener noreferrer">Foundation website <ArrowUpRight size={14} /></a></nav></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Sri Gurudevi Foundation</span><span>Learning platform preview</span></div></footer>
-  </>;
+  </div>;
 }
 function Home() {
   return <>
-    <section className="container hero">
-      <div className="hero-copy">
-        <p className="eyebrow">THE SRI GURUDEVI FOUNDATION</p>
-        <h1>A quieter<br />way of <em>being.</em></h1>
-        <p className="hero-description">Explore forgiveness and breath awareness.<br className="desktop-break" /> A little space for yourself.</p>
+    <section className="home-hero" aria-labelledby="home-title">
+      <img className="home-landscape" src={img('stillness-dawn.jpg')} alt="" width="1717" height="916" fetchPriority="high" />
+      <div className="container home-hero-content">
+        <h1 id="home-title">A quieter way<br />of <em>being.</em></h1>
+        <p>Explore forgiveness and breath awareness.</p>
         <ButtonLink href="#/learn">Begin learning</ButtonLink>
       </div>
-      <figure className="hero-visual">
-        <img className="hero-image" src={img('swami-bali.jpg')} alt="Sri Swami Sai Krsna at a carved stone doorway surrounded by greenery in Ubud, Bali" width="1000" height="1333" fetchPriority="high" />
-        <figcaption>Sri Swami Sai Krsna <span>Ubud, Bali</span></figcaption>
-      </figure>
     </section>
-    <section className="library-section"><div className="container">
-      <div className="section-heading"><h2>A place to begin.</h2><span>Learn at your own pace.</span></div>
-      <div className="course-grid">{courses.map(c => <CourseCard key={c.id} course={c} />)}</div>
-      <p className="preview-note">Reading guides are introductory previews. The official course opens on Teachable.</p>
-    </div></section>
+    <section className="home-learning" aria-labelledby="home-learning-title">
+      <div className="container home-index">
+        <h2 id="home-learning-title">A place<br />{' '}to begin.</h2>
+        {courses.map((course, index) => <a className="home-index-item" key={course.id} href={coursePath(course)}>
+          <span className="index-number" aria-hidden="true">0{index + 1}</span>
+          <h3>{course.title}</h3>
+          <p>{course.externalUrl ? 'Official course · Free' : 'Reading guide · Preview'}</p>
+        </a>)}
+      </div>
+    </section>
     <section className="container about-strip">
       <div><p className="eyebrow">A LIVING TRADITION</p><h2>A simple path.<br /><em>An open heart.</em></h2></div>
       <div><p>The teachings of Sri Swami Sai Krsna invite us to explore nondual forgiveness, awareness of the breath, and the practice of letting go.</p><a className="text-link" href="#/about">Meet the foundation <ArrowRight size={18} /></a></div>
