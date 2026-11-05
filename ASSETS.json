@@ -1,0 +1,6 @@
+{
+  "yantra.jpg": {"source":"https://images.squarespace-cdn.com/content/v1/6931343bc679aa4c5f9ab5f4/9a83f75f-5018-4b8f-8386-fa37783ed199/Yantra.jpg?format=300w","use":"Original foundation mark, no recolouring or redraw"},
+  "swami.jpg": {"source":"https://images.squarespace-cdn.com/content/v1/6931343bc679aa4c5f9ab5f4/88fabaf6-1eb0-4fd6-b763-f77b4fa7e799/PHOTO-2026-01-29-02-40-32.jpg?format=1000w","use":"Original foundation photograph"},
+  "song-of-life.jpg": {"source":"https://images.squarespace-cdn.com/content/v1/6931343bc679aa4c5f9ab5f4/1780959746450-GG5VW7ZZX9N038Z004XT/image-asset.jpeg?format=750w","use":"Original course artwork"},
+  "quiet-valley.jpg": {"source":"OpenAI built-in image generation","use":"Atmospheric artwork, not an actual foundation location","prompt":"Editorial landscape photograph for a calm spiritual learning website, 1536x1024. Empty sandstone veranda with a simple carved stone arch at the far right, overlooking layered green hills and a misty river valley at sunrise. Golden light from the left, natural plants, a small unlit brass oil lamp at lower right. No people, deity, statue, identifiable building, branding, text or watermark. Natural textures, restrained olive green, warm ivory and ochre; subtle film grain. Scenic focus in the center; usable in landscape and portrait crops."}
+}
