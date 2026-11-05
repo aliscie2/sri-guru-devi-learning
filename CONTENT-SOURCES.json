@@ -1,0 +1,74 @@
+{
+  "reviewedAt": "2026-11-05",
+  "policy": "Foundation-facing narrative text must be copied from the supplied development brief or the original foundation website. Do not add marketing taglines, spiritual instructions, invented course titles, reflection prompts or promises. New narrative copy requires an identified source.",
+  "sources": {
+    "brief": "Development Brief — Sri Guru Devi Foundation Online Learning Platform (user supplied)",
+    "home": "https://www.srigurudevifoundation.org/",
+    "practices": "https://www.srigurudevifoundation.org/practices",
+    "swami": "https://www.srigurudevifoundation.org/swami"
+  },
+  "entries": [
+    {
+      "source": "home",
+      "texts": [
+        "Walk With",
+        "Sri Swami Sai Krsna",
+        "Advaita Kshama is the way.",
+        "Learn More About Swami",
+        "Works of Swami",
+        "Upcoming Programs and Events",
+        "Contact Us",
+        "Questions, Comments, Concerns?",
+        "The Song of Life",
+        "The Song of Life Online Course is a six day program",
+        "srigurudevifoundation@gmail.com",
+        "+1 (510) 509-8557"
+      ]
+    },
+    {
+      "source": "brief",
+      "texts": [
+        "Online Learning Platform",
+        "Browse available courses",
+        "Course catalogue",
+        "Student dashboard",
+        "Resume where they left off",
+        "Student registration"
+      ]
+    },
+    {
+      "source": "swami",
+      "texts": [
+        "Who is Swami?",
+        "Swami Sri Guru Brahmananda Nirvananath, Sri Swami Sai Krsna but simply called, “Swami”, is a direct disciple of Sri Guru Mahavatar Babaji and part of the Shiva Yoga Sampradaya (Tradition)."
+      ]
+    },
+    {
+      "source": "practices",
+      "texts": [
+        "Sri Gurudevi Practices",
+        "Kshama Kriya",
+        "Shivanapanasati",
+        "Nondual Forgiveness",
+        "Breath Awareness",
+        "Kshama Kriya & Shivanapanasati",
+        "Kshama Kriya - This is the central practice of Gurudevi Yoga. The Act of Forgiving (Kshama) + Breath Awareness (Shivanapanasati) = Kshama Kriya.",
+        "Ksana, means a moment or instant. There is no way to quantify your time spent with eternity.",
+        "Sambandha, means connection, relationship, and refers to that eternal bond the soul has with the Source of creation.",
+        "Shivanapanasati - Breath Awareness. “Be willing to watch the Breath all day.”",
+        "Sit twice a day, once with eyes closed, once with eyes open for a focused practice watching the breath.",
+        "Every moment you can spare between activities or in the midst of them take a few moments to acknowledge the breath and your existence and try to watch it throughout the day the best you can."
+      ]
+    }
+  ],
+  "interfaceText": "Navigation, action labels, excerpt counts, reading-time estimates, error messages, accessibility labels and accurate preview/privacy disclosures describe implementation behavior; they are not quotations or foundation teachings. Dashboard resume wording changes the source pronoun to address the student.",
+  "removed": [
+    "A quieter way of being",
+    "A place to begin",
+    "A simple path. An open heart.",
+    "Begin where you are",
+    "A living tradition. A simple invitation.",
+    "Generated teaching passages and reflection questions",
+    "Unverified response-time promise on the contact page"
+  ]
+}

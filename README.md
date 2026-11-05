@@ -20,7 +20,7 @@ Node 22 or newer is recommended. `dist/` is the static output. Relative assets a
 ## Included
 
 - Homepage, searchable learning library, course details, lesson reader, learning dashboard, about, contact, privacy, and account-status pages.
-- Two introductory reading guides with three lessons each.
+- Two practice collections with three short, verbatim website excerpts each.
 - Lesson completion timestamps, progress indicators, and last-visited lesson saved on the current browser.
 - Corrupt or unavailable storage handling and synchronization between tabs.
 - Link to the foundation’s actual free Song of Life course on Teachable.
@@ -31,7 +31,7 @@ Node 22 or newer is recommended. `dist/` is the static output. Relative assets a
 
 This is a published design and interaction prototype, not the completed production LMS from the development brief. It does not create student accounts, verify email, reset passwords, or synchronize progress between devices. No passwords or email addresses are collected. The account page explains this directly.
 
-No official lesson videos or curriculum were supplied. The six short readings are clearly labelled editorial previews based on the foundation’s public teachings; they must be reviewed before being represented as an official curriculum. The actual Song of Life course remains on Teachable, which manages its registration and progress.
+No official lesson videos or curriculum were supplied. The six short readings are labelled website excerpts and quote the original practices page directly; they are not an official course syllabus. The actual Song of Life course remains on Teachable, which manages its registration and progress.
 
 The lesson model supports optional `youtubeId` values. Adding an approved ID enables a click-to-load YouTube privacy-enhanced player. No sample or unrelated third-party videos have been inserted, and embedded playback has not been verified because no lesson video IDs are configured.
 
@@ -65,8 +65,12 @@ The production build and progress unit tests pass. Browser checks cover search a
 
 ## Selected Stillness design — 5 November 2026
 
-The homepage implements the selected full-width landscape design: a quiet dawn scene, an overlaid header, Cormorant Garamond typography, one primary action, and a compact numbered learning index. The original yantra is preserved. The library, reading guides, and browser-local progress continue to work.
+The homepage implements the selected full-width landscape design: a quiet dawn scene, an overlaid header, Cormorant Garamond typography, one primary action, and a compact numbered learning index. The original yantra is preserved. The library, sourced practice excerpts, and browser-local progress continue to work.
 
 The desktop layout was compared directly with the selected design image at 1487 × 1058. Mobile and tablet layouts, course search, mobile navigation, lesson completion, refresh persistence, and lesson navigation were checked in the browser. See `design-qa.md` for the visual review and evidence.
 
 The learning platform remains a static preview with browser-local progress. Backend accounts and email are not configured.
+
+## Copy sources
+
+Foundation-facing narrative text comes from the supplied development brief and the original foundation website. `CONTENT-SOURCES.json` maps the selected wording to its sources and records the editorial rule. The homepage now uses the original “Walk With Sri Swami Sai Krsna” heading. Generated slogans, teaching passages, reflection prompts, and response-time promises have been removed. Functional labels and accurate preview/privacy disclosures describe the implemented interface and are not represented as foundation quotations.

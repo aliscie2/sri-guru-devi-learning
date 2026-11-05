@@ -30,3 +30,11 @@ Screenshots inspected: desktop 1487 × 1058, mobile 390 × 844, tablet 768 × 10
 Evidence: `../stillness-desktop-v1.jpg`, `../stillness-mobile.jpg`, `../stillness-tablet.jpg`, and `../stillness-lesson-mobile.jpg`. The two existing progress tests passed. The production build is checked before publication; GitHub Actions repeats tests and build during deployment.
 
 This is a targeted visual and interaction review, not a complete accessibility audit or verification of a production LMS backend.
+
+## Source-copy correction — 5 November 2026
+
+Result: passed. The user's content-source constraint supersedes the mockup's invented wording. The homepage now reads “Walk With Sri Swami Sai Krsna” and “Advaita Kshama is the way.” from the original homepage. Course headings, About copy, and all six teaching excerpts were checked against the original foundation pages. Brief-derived labels replace promotional headings. Thirty selected phrases passed exact-source matching after whitespace and Markdown normalization; the published email and telephone were separately verified in the original site's footer.
+
+Generated spiritual guidance and reflection prompts were removed. The collection and lesson IDs remain unchanged to preserve saved progress. Functional interface text and accurate preview/privacy disclosures remain descriptive of the implementation.
+
+The adjusted headline and longer button were visually checked at 1280 px desktop and 320 px narrow mobile. The mobile button wraps legibly without horizontal overflow. Screenshots: `../sourced-copy-desktop.jpg` and `../sourced-copy-mobile.jpg`. Catalogue navigation and search were checked; production build and both existing progress tests passed. `CONTENT-SOURCES.json` records the allowed sources and selected wording.

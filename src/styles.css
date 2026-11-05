@@ -213,7 +213,7 @@ footer { background:var(--surface); border-top:1px solid var(--line); }
 .home-landscape { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; z-index:-2; }
 .home-hero:before { content:''; position:absolute; inset:0; background:#111812; opacity:.13; z-index:-1; }
 .home-hero-content { padding-block:190px 88px; }
-.home-hero h1 { color:inherit; font-size:clamp(96px,9.4vw,148px); line-height:.86; font-weight:400; letter-spacing:-3.8px; text-wrap:initial; }
+.home-hero h1 { color:inherit; font-size:clamp(76px,7.7vw,116px); line-height:1.02; font-weight:400; letter-spacing:-3.8px; text-wrap:initial; }
 .home-hero h1 em { color:inherit; }
 .home-hero-content>p { font-family:var(--serif); font-size:32px; line-height:1.3; margin-top:32px; }
 .home-hero .button { background:#f8f2e4; border-color:#f8f2e4; color:#292a24; font-family:var(--serif); font-size:27px; font-weight:500; min-height:69px; min-width:284px; padding:12px 30px; gap:32px; margin-top:36px; border-radius:2px; }
@@ -267,7 +267,7 @@ footer { background:var(--surface); border-top:1px solid var(--line); }
  .is-home .desktop-nav { font-size:17px; gap:38px; }
  .home-hero { min-height:650px; }
  .home-hero-content { padding-bottom:70px; }
- .home-hero h1 { font-size:108px; }
+ .home-hero h1 { font-size:clamp(70px,7.7vw,100px); }
  .home-hero-content>p { font-size:28px; }
  .home-hero .button { min-height:60px; min-width:244px; font-size:25px; }
  .home-index { grid-template-columns:180px repeat(3,minmax(0,1fr)); gap:30px; padding-block:48px 54px; }
@@ -277,7 +277,7 @@ footer { background:var(--surface); border-top:1px solid var(--line); }
 }
 @media(max-width:850px) {
  .home-hero { min-height:660px; height:85vw; max-height:780px; }
- .home-hero h1 { font-size:100px; }
+ .home-hero h1 { font-size:clamp(62px,9.1vw,78px); }
  .home-index { grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
  .home-index>h2 { grid-column:1/-1; font-size:46px; }
  .home-index>h2 br { display:none; }
@@ -298,7 +298,7 @@ footer { background:var(--surface); border-top:1px solid var(--line); }
  .home-landscape { object-position:57% center; }
  .home-hero:before { opacity:.25; }
  .home-hero-content { padding-block:170px 58px; }
- .home-hero h1 { font-size:clamp(52px,16.8vw,88px); line-height:.98; letter-spacing:-2px; }
+ .home-hero h1 { font-size:clamp(47px,12.8vw,70px); line-height:1.02; letter-spacing:-2px; }
  .home-hero-content>p { max-width:320px; font-size:25px; line-height:1.35; margin-top:24px; }
  .home-hero .button { min-height:58px; min-width:220px; font-size:24px; padding:12px 23px; margin-top:30px; gap:30px; }
  .home-index { display:flex; flex-direction:column; gap:27px; padding-block:39px 42px; }
